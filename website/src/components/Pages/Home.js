@@ -5,6 +5,8 @@ import image from '../assets/img/header-bg.jpg';
 // Reusable Components
 import Services from '../Common/Services';
 import Portfolio from '../Common/Portfolio';
+import Team from '../Common/Team';
+import Clients from '../Common/Clients';
 
 class Home extends Component {
 
@@ -22,6 +24,8 @@ class Home extends Component {
 
                 <Services />
                 <Portfolio />
+                <Team />
+                <Clients />
             </div>
         )
     }
