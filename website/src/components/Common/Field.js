@@ -12,8 +12,11 @@ class Field extends Component {
                         id={this.props.type}
                         type={this.props.type}
                         placeholder={this.props.placeholder}
-                        value={this.props.value}
-                        onChange={e => this.onChange(e)}
+                        name = {this.props.name}
+                        onChange={this.props.onChange}
+                        onBlur={this.props.onBlur}
+                    
+                   
                     />  
                    
 
@@ -24,15 +27,20 @@ class Field extends Component {
                         className="form-control"
                         id={this.props.name}
                         placeholder={this.props.placeholder}
-                        value={this.props.value}
-                        onChange={e => this.props.onChange(e)}
+                        name = {this.props.name}
+                        onChange={this.props.onChange}
+                        onBlur={this.props.onBlur}
                     />
                    
 
                 }
 
 
-                <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                <div className="help-block text-danger">
+                    {(this.props.touched && this.props.errors) &&
+                        <span>{this.props.errors}</span>
+                    }
+                </div>
             </div>
         )
     }
