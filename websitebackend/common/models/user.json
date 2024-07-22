@@ -17,8 +17,13 @@
   "relations": {
     "Profile": {
       "type": "hasMany",
-      "model":"Profile",
+      "model": "Profile",
       "foreignKey": ""
+    },
+    "accessTokens":{
+      "type":"hasMany",
+      "model":"CustomAccessToken",
+      "foreignKey":"userId"
     }
   },
   "acls": [],
