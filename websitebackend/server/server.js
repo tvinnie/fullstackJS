@@ -40,7 +40,7 @@ app.models.user.find((err,result)=>{
     const user = {
       email:'vin@vin.com',
       username: 'vin',
-      password:'vinvin'
+      password:'******'
     };
 
     app.models.user.create(user,(err,result) =>{
