@@ -42,23 +42,10 @@ var models = require('./server.js').models;
 // finding data
 var filter = {
     where: {
-        name: {like: 'Nick'}
+        email: {like: 'vin'}
     },
     order:'id ASC', //date/id ASC/DESC
     limit:10,
-    // include: {
-    //     relation:'Posts',
-    //     scope:{
-    //         limit:5,
-    //         order:'date',
-    //         include:{
-    //             relation:'Image',
-    //             limit:1,
-    //             where: {type: 'thumbnail'}
-    //         }
-    //     }
-    // }
-
 }
 
 // models.Profile.findOne({where: {name: 'Nik3'}}, (err, found) =>{
