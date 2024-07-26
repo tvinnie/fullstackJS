@@ -40,18 +40,23 @@ var models = require('./server.js').models;
 // })
 
 // finding data
+
 var filter = {
     where: {
-        email: {like: 'vin'}
+        name: {like: 'Nik'}
     },
     order:'id ASC', //date/id ASC/DESC
     limit:10,
+    skip:0,
+    fields:{
+        email: true
+    }
 }
 
 // models.Profile.findOne({where: {name: 'Nik3'}}, (err, found) =>{
 //     console.log("Found?",err, found);
 // })
 
-models.Profile.find(filter, (err, found) =>{
+models.Profile.destroyAll(filter.where, (err, found) =>{
     console.log("Found?",err, found);
 }) //order by most recent
