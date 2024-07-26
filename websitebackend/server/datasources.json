@@ -1,11 +1,11 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "restmyweb",
+    "password": "",
     "name": "db",
     "connector": "mongodb",
-    "host": "localhost",
-    "port":27017,
-    "database":"restmyweb",
-    "user":"",
-    "password":""
+    "user": ""
   }
 }
